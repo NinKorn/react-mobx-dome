@@ -77,3 +77,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
      `` ["@babel/plugin-proposal-decorators", { "legacy": true }],``
      `` ["@babel/plugin-proposal-class-properties", { "loose" : true }]``
    `` ]``
+## 使用less 
+  在webpack.config,js内仿照sass配置
+  清除默认样式

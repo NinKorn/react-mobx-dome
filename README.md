@@ -83,3 +83,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ## 安装路由
 - cnpm i react-router -S
 - cnpm i react-router-dom -S
+## 配置axios请求

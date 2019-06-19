@@ -9,7 +9,6 @@ function App() {
       <Router>
             <div>
                 <Switch>
-                    {/* //主要逻辑在这里 */}
                     {
                         routes.map((item, i) => {
                             if(item.exact){

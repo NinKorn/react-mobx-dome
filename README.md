@@ -80,3 +80,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ## 使用less 
   在webpack.config,js内仿照sass配置
   清除默认样式
+## 安装路由
+- cnpm i react-router -S
+- cnpm i react-router-dom -S

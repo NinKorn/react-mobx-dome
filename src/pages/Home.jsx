@@ -1,15 +1,12 @@
-import React , { Component } from 'react'
-import AppHeader from '../Components/Header';
+import React, { Component } from 'react'
+
 import '../styles/home.less';
 
 class Home extends Component {
     render() {
         return (
-            <div>
-                <AppHeader></AppHeader>
-                <div className="home">
-                    home
-                </div>
+            <div className="home">
+                home
             </div>
         )
     }

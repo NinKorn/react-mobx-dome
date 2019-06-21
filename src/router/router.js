@@ -1,11 +1,10 @@
 import Home from '../pages/Home';
+import GoodsList from '../pages/GoodsList';
 
-let router = [
-    {
-        path: '/',//首页默认加载的页面
-        component: Home,
-        exact: true //是否为严格模式
-    }
-];
+let global = {
+    Home,
+    GoodsList
+};
 
-export default router;
+
+export default global;

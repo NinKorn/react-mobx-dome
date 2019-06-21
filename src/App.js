@@ -1,54 +1,42 @@
+
 import React, { Component } from 'react';
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import routes from './router/router';
+// 路由
+import { BrowserRouter } from 'react-router-dom';
+
+// 布局组件
+import AppHeader from './Components/Header'; //头部
+import AppSider from './Components/sider'; //导航组件
+import ContentMain from './Components/ContentMain'; //导航组件
+import { Layout } from 'antd';
+
+//样式引用
 import './App.css';
 import 'antd/dist/antd.css';
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
 
-// function App() 
+const { Header, Content, Footer } = Layout;
+
 class App extends Component {
-  state = {
-    collapsed: false,
-  };
 
-  onCollapse = collapsed => {
-    console.log(collapsed);
-    this.setState({ collapsed });
-  };
   render() {
     return (
       <Layout style={{ minHeight: '100vh' }}>
-        
-        <Layout>
-          <Header style={{ background: '#fff', padding: 0 }}>
-            头导航
+        <BrowserRouter>
+          <Header style={{ background: '#000', padding: 0 }}>
+            <AppHeader/>
           </Header>
-          <Content>
+          <Layout style={{ flexDirection: 'row' }}>
+            <AppSider/>
+            <Layout >
+              
+              <Content>
+                <ContentMain />
+              </Content>
 
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>Bill is a cat.</div>
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-        </Layout>
+              <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            </Layout>
+          </Layout>
+        </BrowserRouter>
       </Layout>
-      // <div className="App" >
-      //   <Router>
-      //     <div>
-      //       <Switch>
-      //         {
-      //           routes.map((item, i) => {
-      //             if (item.exact) {
-      //               return <Route exact path={item.path} component={item.component} key={i} />
-      //             } else {
-      //               return <Route path={item.path} component={item.component} key={i} />
-      //             }
-      //           })
-      //         }
-      //       </Switch>
-      //     </div>
-      //   </Router>
-      // </div>
     )
   }
 }

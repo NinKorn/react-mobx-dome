@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 // 布局组件
 import AppHeader from './Components/Header'; //头部
 import AppSider from './Components/sider'; //导航组件
-import ContentMain from './Components/ContentMain'; //导航组件
+import ContentMain from './Components/ContentMain'; // 主题组件
 import { Layout } from 'antd';
 
 //样式引用
@@ -27,8 +27,8 @@ class App extends Component {
           <Layout style={{ flexDirection: 'row' }}>
             <AppSider/>
             <Layout >
-              
-              <Content>
+
+              <Content style={{ display:'flex', flexDirection:'column' }}>
                 <ContentMain />
               </Content>
 

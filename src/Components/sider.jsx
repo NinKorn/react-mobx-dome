@@ -17,7 +17,12 @@ class Sider extends Component {
                     defaultOpenKeys={['sub2']}
                     mode="inline"
                 >
-                    <Menu.Item key="/"> <Icon type="home" /> <span>首页</span></Menu.Item>
+                    <Menu.Item key="/"> 
+                        <Link to="/">
+                            <Icon type="home" /> 
+                            <span>首页</span>
+                        </Link>
+                    </Menu.Item>
                     <SubMenu
                         key="sub2"
                         title={
